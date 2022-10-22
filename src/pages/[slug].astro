@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    const projects = await Astro.glob('../projects/*.md');
+
+    return projects.map(project => ({
+        params: {
+            slug: project.frontmatter.slug
+        },
+        props: {
+            project
+        }
+    }));
+}
+
+const { Content, frontmatter } = Astro.props.project;
+---
+
+<Layout title={`Project Showcase - ${frontmatter.title}`}>
+    <a href="/">&#x2190; Go Back</a>
+    <h1>{frontmatter.title}</h1>
+    <!-- <p>{new Date(frontmatter.date).toLocaleDateString()}</p> -->
+    <p>{frontmatter.excerpt}</p>
+    
+    <Content />
+</Layout>

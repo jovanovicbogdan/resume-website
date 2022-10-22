@@ -1,0 +1,35 @@
+---
+import resume from '../assets/resume.pdf';
+---
+
+<section class="section--page">
+        
+    <div id="socials--list">
+        <a href="https://twitter.com/jbogdan1998" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com/in/bogdan-jovanovic/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/BogyJ" target="_blank">GitHub</a>
+        <a href={resume} target="_blank">Download Resume</a>
+    </div>
+</section>
+
+<style>
+    #socials--list{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 1em;
+        flex-wrap: wrap;
+    }
+
+    #socials--list a{
+        font-weight: 300;
+        color: var(--secondaryTextColor);
+        font-size: 0.9em;
+        transition: 0.3s;
+    }
+
+    #socials--list a:hover{
+        font-weight: 100;
+        color: var(--mainLinkColor);
+        font-size: 0.9em;
+    }
+</style>

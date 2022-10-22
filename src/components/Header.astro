@@ -1,0 +1,41 @@
+---
+import profile from "../assets/images/profile.jpg";
+---
+
+<section id="wrapper--hero" class="section--page">
+    <img id="profile-pic" src={profile}>
+
+    <div>
+        <h1 id="user-name">Bogdan Jovanović</h1>
+        <p id="bio">Automation Engineer at <a href="https://www.upwork.com/" target="_blank">Upwork</a>.</p>
+        <p id="email">👉 bogdanjovanovicqa@gmail.com</p>
+    </div>  
+</section>
+
+<style>
+    #wrapper--hero{
+        display: flex;
+        align-items: center;
+        gap: 4em;
+    }
+
+    #bio, a{
+        font-weight: 300;
+    }
+
+    #user-name{
+        font-size: 48px;
+        line-height: 1em;
+    }
+
+    #profile-pic{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    #email{
+        color: var(--mainTextColor);
+    }
+</style>
